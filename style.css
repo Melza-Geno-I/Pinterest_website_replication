@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family:"Poppins",sans-serif;
+  
 }
 html{
     scroll-behavior: smooth;
@@ -28,6 +29,7 @@ html{
             background-color: transparent;
             outline: none;
             border: none;
+           
             .img{
                     width: 45px;
                     height: 45px;
@@ -77,9 +79,25 @@ html{
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+
 }
 
+.container .dot{
+    width: 50px;
+    height: 50px;
+    border: .5px solid grey;
+    background-color: rgb(255, 255, 255);
+}
+.section1 h1{
+    position: absolute;
+    font-family: 'Roboto',sans-serif;
+    font-size: 55px;
+    font-weight: 500;
+    color: black;
+    top:20%;
+}
 .section1{
+    box-shadow: 0px -136px 22px -44px rgba(255,255,255,0.81) inset;
     display: flex;
     width: 100%;
     place-content: center;
@@ -91,66 +109,70 @@ html{
     position: relative;
     .downNavBtn{
         position: absolute;
-        width: 50px;
-        height: 50px;
+        width:45px;
+        height:45px;
         border: 1px solid transparent;
         border-radius: 50%;
         background-color: goldenrod;
         color: white;
-        bottom: 10%;
+        bottom: 6%;
         outline: none;
-        font-size: 20px;
+        font-size: 17px;
         font-weight: 800;
+        animation: btn 1s;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
     }
-
-    }
-    .section1 h1{
-        position: absolute;
-        font-family: 'Roboto',sans-serif;
-        font-size: 55px;
-        font-weight: 500;
-        color: black;
-        top:25%;
-    }
-    .section1 .column {
+    .slide{
         display: flex;
-        flex-direction: column;
-        width: fit-content;
-        height: fit-content;
-        top: 30%;
-        position: inherit;
-        animation: fadeIn 2s;
-            animation-iteration-count: infinite;
-       
-
+        flex-direction: row;
+        position: relative;
+        top: 33%;
+        
+        .title{
+            position: absolute;
+            display: flex;
+            width: 100%;
+            justify-content: center;
+        }
+            .column{
+                display: flex;
+                flex-direction: column;
+                width: fit-content;
+                height: fit-content;
+                position: relative;
+                animation: fadeIn 2s;
+                animation-iteration-count: infinite ;
+            }
+             .column.col-2{
+                top: 25%;
+                animation-delay:.2s ;
+                 } 
+             .column.col-3{
+                top: 45%;
+                animation-delay: .4s;
+             }
+             .column.col-4{
+                top: 67%;
+                animation-delay:.6s ;
+             }
+             .column.col-5{
+                top: 45%;
+                animation-delay: .8s;
+             }
+             .column.col-6{
+                top: 25%;
+                animation-delay: 1s;
+             }
+             .column.col-7{
+                top: 0%;
+                animation-delay: 1.2s;
+             } 
+        }
+           
     }
-        .column.col-1{
-           top: 30%;
-        }
-        .column.col-2{
-            top: 55%;
-           animation-delay:.2s ;
-            } 
-        .column.col-3{
-            top: 80%;
-           animation-delay: .4s;
-        }
-        .column.col-4{
-            top: 105%;
-           animation-delay:.6s ;
-        }
-        .column.col-5{
-            top: 80%;
-           animation-delay: .8s;
-        }
-        .column.col-6{
-            top: 55%;
-           animation-delay: 1s;
-        }
-        .column.col-7{
-            top: 30%;
-           animation-delay: 1.2s;
-        } 
+   
+        
 
 @keyframes fadeIn {
     0%{
@@ -159,19 +181,28 @@ html{
     100%{opacity: 1;
     translate: 0 ;}
 }    
+@keyframes btn {
+    0%{
+       transform: translateY(5px) ;
+    }
+    100%{
+        transform: translateY(-10px);
+    }
+}
 
     .section2{
         background-color: rgb(255, 249, 134); 
         font-family: 'Roboto',sans-serif;
         font-size: 15px;
         font-weight: 500;
+        width: 100vw;
         height: 112vh;
         text-align: center;
         padding: 1rem;
         .grid{
             display: grid;
             grid-template-columns: 45% 55%;
-            margin: 1rem;
+            padding: 1rem;
             .block1{
                 position: relative;
                 height: 102vh;
@@ -481,16 +512,27 @@ html{
             left: 50%;
         }
     }
+
     .section5 {
         .section5SubContainer{
             width: 100vw;
             height: 95vh;
-            background-color: rgb(56, 55, 55);
-            position: relative;
+           position: relative;
+            .section5BG{
+               position: absolute;
+               display: flex;
+               flex-direction: row;
+                z-index: -1;
+                .column{
+                    display: flex;
+                    flex-direction: column;
+                    
+                }
+            }
             .grid{
-                height: 100vh;
-                position: relative;
-                background-color: rgba(53, 53, 53, 0.089);
+                position: inherit;
+                background-color: rgba(0, 0, 0, 0.596);
+                z-index: 0;
                 .block1{
                     color: white;
                     font-size: 35px;
