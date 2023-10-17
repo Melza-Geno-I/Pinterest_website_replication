@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pinterest</title>
     <link rel="icon" href="https://s.pinimg.com/webapp/logo_trans_144x144-a77ee814.png" type="image/icon type" style="background-color: white;">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -28,15 +28,20 @@
     </div>
 </header>
 
-    <section class="container section1" >
+    <section class="container section1" id="section1" >
         <h1>Get your next</h1>
 
+    <!--carousal pointers start-->
         <div class="dots" style="text-align: center;">
-            <input id="radio1" type="radio" class="dot" onclick="currentslides(2)" style="color: rgb(33, 144, 218);">
-            <input id="radio2" type="radio" class="dot" onclick="currentslides(1)" style="color:  rgb(199, 150, 27);">
-            <input id="radio3" type="radio" class="dot" onclick="currentslides(3)" style="color:  rgb(79, 118, 121);">
-            <input id="radio4" type="radio" class="dot" onclick="currentslides(4)">
+                <ul class="carousal-pointers">
+                    <li class="dot selected " id="radio" ></li>
+                    <li class="dot " id="radio1" ></li>
+                    <li class="dot" id="radio2" ></li>
+                    <li class="dot " id="radio3" ></li>
+
+                </ul>
         </div>
+    <!--Carousal pointers end-->
 
         <div class="slide" >    
             <div class="title"><h1 style="color:  rgb(199, 150, 27);">chai time snacks idea</h1 style="color:  rgb(199, 150, 27);"></div>
@@ -304,11 +309,13 @@
     
         </div>
 
+        <div class="nav">
+            <a href="#section2" class="downNavBtn active" id="btn1"><i class="fa-solid fa-angle-down"></i></a>
+        </div>
 
-    <button class="downNavBtn ani" style="background-color:  rgb(199, 150, 27);" ><i class="fa-solid fa-chevron-down fa-lg"></i></button>
     </section>
 
-    <section class="container section2">
+    <section class="container section2" id="section2">
         <p>Here's how it works <i class="fa-solid fa-chevron-down"></i></p>
         <div class="grid">
             <div class="block1">
@@ -453,7 +460,7 @@
             
             </div>
             <div class="grid">
-                <button class="upNavBtn"><i class="fa-solid fa-angle-up"></i></button>
+                <a href="#section1" class="upNavBtn"><i class="fa-solid fa-angle-up"></i></a>
                 <!-- <img alt="chai" src="https://i.pinimg.com/550x/0c/18/3d/0c183dafd58d1ebdbe3cb6865e56d516.jpg" style="object-fit: cover;"> -->
                 <div class="block1">
                     <h1 style="font-weight: 500;">Sign up to get your ideas</h1>
@@ -508,6 +515,6 @@
 
     </section>
 
-<script src="index.js"></script>
+<script src="scripts/index.js"></script>
 </body>
 </html>
