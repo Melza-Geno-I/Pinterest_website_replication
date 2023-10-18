@@ -1,8 +1,15 @@
+
 const slides = document.querySelectorAll('.slide');
 const carousalPointers = document.querySelectorAll('.carousal-pointers li');
-const downButtons= document.querySelectorAll('.downNavBtn');
+const downButton = document.querySelector('.downNavBtn'); // Define the single downButton
 let currentSlideIndex = 0;
 let intervalId;
+
+// Initialize and start the carousel
+function startCarousel() {
+    showSlide(currentSlideIndex);
+    intervalId = setInterval(autoChangeCarousel, 2000);
+}
 
 // Function to show the current slide
 function showSlide(index) {
@@ -11,28 +18,13 @@ function showSlide(index) {
     });
 }
 
-// Function to handle the click event on carousel pointers
-function handleIndicatorClick(index) {
-    // console.log(index);
-    document.querySelector('.carousal-pointers .selected').classList.remove('selected');
-    carousalPointers[index].classList.add('selected');
-    currentSlideIndex = index;
-    showSlide(currentSlideIndex);
-    downButtons[index].classList.add('active');
-     // console.log(downButtons[index]);
-}
-
 // Function to automatically change the carousel
 function autoChangeCarousel() {
     currentSlideIndex = (currentSlideIndex + 1) % carousalPointers.length;
     handleIndicatorClick(currentSlideIndex);
 }
 
-// Initialize and start the carousel
-function startCarousel() {
-    showSlide(currentSlideIndex);
-    intervalId = setInterval(autoChangeCarousel, 2000);
-}
+
 
 // Event listeners for manual carousel control
 carousalPointers.forEach((indicator, index) => {
@@ -43,3 +35,52 @@ carousalPointers.forEach((indicator, index) => {
 
 // Initial setup
 startCarousel();
+
+
+// Function to automatically change the carousel
+function autoChangeCarousel() {
+    // Remove the current color class
+    downButton.classList.remove(`button-color-${currentSlideIndex + 1}`);
+
+    // Update the currentSlideIndex
+    currentSlideIndex = (currentSlideIndex + 1) % carousalPointers.length;
+
+    // Add the new color class
+    downButton.classList.add(`button-color-${currentSlideIndex + 1}`);
+
+    handleIndicatorClick(currentSlideIndex);
+}
+
+//button color change
+function handleIndicatorClick(index) {
+    // Remove the current color class from the button
+    downButton.classList.remove(`button-color-${currentSlideIndex + 1}`);
+
+    // Apply the appropriate color class to the button based on the index
+    switch (index) {
+        case 0:
+            downButton.classList.add('button-color-1');
+            break;
+        case 1:
+            downButton.classList.add('button-color-2');
+            break;
+        case 2:
+            downButton.classList.add('button-color-3');
+            break;
+        case 3:
+            downButton.classList.add('button-color-4');
+            break;
+        default:
+            break;
+    }
+
+    // Remove the 'selected' class from all pointers
+    carousalPointers.forEach(pointer => {
+        pointer.classList.remove('selected');
+    });
+
+    // Add the 'selected' class to the selected pointer
+    carousalPointers[index].classList.add('selected');
+    currentSlideIndex = index;
+    showSlide(currentSlideIndex);
+}

@@ -205,18 +205,26 @@ body{
     .section1 .dots .carousal-pointers #radio3.selected{
         background-color:  rgb(12, 77, 17);
     }
-/* end */
-    
-.section1 .nav .downNavBtn #btn1.active{
-    background-color: rgb(199, 150, 27);
+/* end
+
+/* Define button color classes */
+.section1 .nav .downNavBtn.button-color-1 {
+    background-color:  rgb(199, 150, 27); /* Red color for button 1 */
 }
 
-    @keyframes btnColor {
-        25%{background-color: rgb(199, 150, 27);}
-        50%{background-color: rgb(5, 117, 192);}
-        75%{background-color: rgb(79, 109, 121);}
-        100%{background-color:rgb(28, 63, 31) ;}
-    }
+.section1 .nav .downNavBtn.button-color-2 {
+    background-color:rgb(33, 144, 218); /* Green color for button 2 */
+}
+
+.section1 .nav .downNavBtn.button-color-3 {
+    background-color:rgb(79, 118, 121); /* Blue color for button 3 */
+}
+
+.section1 .nav .downNavBtn.button-color-4 {
+    background-color:rgb(12, 77, 17); /* Yellow color for button 4 */
+}
+
+    
     @keyframes fadeIn {
         0%{
         translate: 0 50px;
@@ -226,7 +234,7 @@ body{
     }    
     @keyframes btn {
         0%{
-        transform: translateY(0px) ease;
+        transform: translateY(0px) ;
         }
         50%{ transform: translateY(10px) ;}
         100%{
