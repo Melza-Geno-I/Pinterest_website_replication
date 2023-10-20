@@ -96,7 +96,7 @@ body{
     display: flex;
     width: 100vw;
     place-content: center;
-    height: 90vh;
+    height: 100vh;
     background-color: rgb(255, 255, 255);
     color: black;
     text-align: center;
@@ -109,7 +109,7 @@ body{
     }
    .nav{
     position: absolute;
-        bottom: 6%;
+    bottom: 14%;
     .downNavBtn{
         background-color: rgb(199, 150, 27);
         width:45px;
@@ -128,14 +128,36 @@ body{
         justify-content: center;
         text-decoration: none;
         
+    }}
+    .section1-footer{
+        position: absolute;
+        width: 100vw;
+        height: 10vh;
+        background-color:rgb(255,253,146);
+        bottom: 0%;
+        z-index: 1;
+        display: flex;
+        align-items: center; 
+        justify-content: center;
+        color: black;
+        font-weight: 500;
     }
-   } 
+    .section1-footer::before{
+        /* box-shadow: 0 -70px 50px -20px rgba(255, 255, 255, 0.767); */
+        background: linear-gradient( to top, white,rgba(255, 255, 255, 0)) ;
+        position: absolute;
+        top:-80px;
+        left:0;
+        height: 80px;
+        width: 100%;
+        content:''
+    }
     
     .slide{
         display: flex;
         flex-direction: row;
         position: relative;
-        top: 37%;
+        top: 32%;
         .title{
             position: absolute;
             display: flex;
@@ -154,23 +176,27 @@ body{
                 animation-iteration-count: infinite ;
             }
              .column.col-2{
-                top: 25%;
+                margin-top: 160px;
                 animation-delay:.2s ;
                  } 
              .column.col-3{
-                top: 45%;
+                margin-top:240px ;
+                /* top: 45%; */
                 animation-delay: .4s;
              }
              .column.col-4{
-                top: 67%;
+                /* top: 67%; */
+                margin-top: 350px;
                 animation-delay:.6s;
              }
              .column.col-5{
-                top: 45%;
+                /* top: 45%; */
+                margin-top:240px ;
                 animation-delay: .8s;
              }
              .column.col-6{
-                top: 25%;
+                margin-top: 160px;
+                /* top: 25%; */
                 animation-delay: 1s;
              }
              .column.col-7{
@@ -207,23 +233,21 @@ body{
     .section1 .dots .carousal-pointers #radio3.selected{
         background-color:  rgb(12, 77, 17);
     }
-/* end
 
-/* Define button color classes */
 .section1 .nav .downNavBtn.button-color-1 {
-    background-color:  rgb(199, 150, 27); /* Red color for button 1 */
+    background-color:  rgb(199, 150, 27); 
 }
 
 .section1 .nav .downNavBtn.button-color-2 {
-    background-color:rgb(33, 144, 218); /* Green color for button 2 */
+    background-color:rgb(33, 144, 218); 
 }
 
 .section1 .nav .downNavBtn.button-color-3 {
-    background-color:rgb(79, 118, 121); /* Blue color for button 3 */
+    background-color:rgb(79, 118, 121); 
 }
 
 .section1 .nav .downNavBtn.button-color-4 {
-    background-color:rgb(12, 77, 17); /* Yellow color for button 4 */
+    background-color:rgb(12, 77, 17); 
 }
 
     
@@ -236,21 +260,20 @@ body{
     }    
     @keyframes btn {
         0%{
-        transform: translateY(0px) ;
+        transform: translateY(-10px) ;
         }
-        50%{ transform: translateY(10px) ;}
+        50%{ transform: translateY(0px) ;}
         100%{
             transform: translateY(-10px) ;
         }
     }
     .section2{
-        box-shadow: 0px -50px 50px -50px rgb(255, 255, 255);
-        background-color: rgb(255, 249, 134); 
+        background-color: rgb(255,253,146); 
         font-family: 'Roboto',sans-serif;
         font-size: 15px;
         font-weight: 500;
         width: 100vw;
-        height: 110vh;
+        height: 100vh;
         text-align: center;
         padding: 1rem;
         .grid{
@@ -569,8 +592,10 @@ body{
             height: 95vh;
            position: relative;
             .section5BG{
+                display: flex;
+                align-items: center;
+                justify-content: center;
                position: absolute;
-               display: flex;
                flex-direction: row;
                 z-index: -1;
                 .column{
