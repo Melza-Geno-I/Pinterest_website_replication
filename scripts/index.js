@@ -1,14 +1,13 @@
 
 const slides = document.querySelectorAll('.slide');
 const carousalPointers = document.querySelectorAll('.carousal-pointers li');
-const downButton = document.querySelector('.downNavBtn'); // Define the single downButton
+const downButton = document.querySelector('.downNavBtn');
 let currentSlideIndex = 0;
-let intervalId;
 
 // Initialize and start the carousel
 function startCarousel() {
     showSlide(currentSlideIndex);
-    intervalId = setInterval(autoChangeCarousel, 2000);
+    setInterval(autoChangeCarousel, 2000);
 }
 
 // Function to show the current slide
@@ -17,14 +16,6 @@ function showSlide(index) {
         slide.style.display = i === index ? 'flex' : 'none';
     });
 }
-
-// Function to automatically change the carousel
-function autoChangeCarousel() {
-    currentSlideIndex = (currentSlideIndex + 1) % carousalPointers.length;
-    handleIndicatorClick(currentSlideIndex);
-}
-
-
 
 // Event listeners for manual carousel control
 carousalPointers.forEach((indicator, index) => {
@@ -35,7 +26,6 @@ carousalPointers.forEach((indicator, index) => {
 
 // Initial setup
 startCarousel();
-
 
 // Function to automatically change the carousel
 function autoChangeCarousel() {
