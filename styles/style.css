@@ -268,6 +268,8 @@ body{
             transform: translateY(-10px) ;
         }
     }
+    
+    /* section-2 styles start*/
     .section2{
         background-color: rgb(255,253,146); 
         font-family: 'Roboto',sans-serif;
@@ -395,78 +397,87 @@ body{
                 height: 100vh;
                 cursor: pointer;
                 color: white;
-                .image{
-                    width: 400px;
-                    height: 400px;
-                    position: relative;
-                    .image1{
-                        border-radius: 70px;
-                    }
-                    .image1Heading{
-                        position: absolute;
-                        text-align: center;
-                        top:18%;
-                        font-size:50px ;
-                        padding: 2rem;
-                        text-align: left;
-                        font-weight: 500;
-                    }
-                    .section3Grid{
-                        position: absolute;
-                        display: grid;
-                        width: 100%;
-                        gap: 1rem;
-                        top: 58%;
-                        padding: 1.5rem;
-                        grid-template-areas: 'one two three';
-                        align-items: center;
-                        justify-content: center;
-                    }
-                    .image2{
-                        grid-area: 'one';
-                        border-radius: 20px;
-                    }
-                    .image3{
-                        grid-area: 'two';
-                        border-radius: 20px;
-                    }
-                    .image4{
-                        grid-area: 'three';
-                        border-radius: 20px;
-                    }
-                    .scandinavian{
-                        position: absolute;
-                        width:200 ;
-                        height:200 ;
-                        right: -60%;
-                        top: 0%;
-                        display: flex;
-                        justify-content: end;
-                        align-items: end;
-                        .scandinavianHeading{
-                            position: inherit;
-                            top:  20%;
-                            bottom: 0%;
+                .section3-img-container{
+                    display: flex;
+                    align-items: center;
+                    justify-content: left;
+                    width: 100%;
+                    height: 100%;
+                    .image{
+                        width: 400px;
+                        height: 400px;
+                        position: relative;
+                       
+                        .image1{
+                            border-radius: 70px;
+                        }
+                        .image1Heading{
+                            position: absolute;
+                            text-align: center;
+                            top:18%;
+                            font-size:50px ;
+                            padding: 2rem;
                             text-align: left;
-                            font-weight: bold;
+                            font-weight: 500;
+                        }
+                        .section3Grid{
+                            position: absolute;
+                            display: grid;
+                            width: 100%;
+                            gap: 1rem;
+                            top: 58%;
+                            padding: 1.5rem;
+                            grid-template-areas: 'one two three';
+                            align-items: center;
+                            justify-content: center;
+                        }
+                        .image2{
+                            grid-area: 'one';
+                            border-radius: 20px;
+                        }
+                        .image3{
+                            grid-area: 'two';
+                            border-radius: 20px;
+                        }
+                        .image4{
+                            grid-area: 'three';
+                            border-radius: 20px;
+                        }
+                        .scandinavian{
+                            position: absolute;
+                            width:200 ;
+                            height:200 ;
+                            right: -60%;
+                            top: 0%;
+                            display: flex;
+                            justify-content: end;
+                            align-items: end;
+                            .scandinavianHeading{
+                                position: inherit;
+                                top:  20%;
+                                bottom: 0%;
+                                text-align: left;
+                                font-weight: bold;
+                            }
+                        }
+                        .deck{
+                            position: absolute;
+                            bottom: -10%;
+                            right: -45%;
+                        }
+                        .serve{
+                            position: absolute;
+                            bottom: -110%;
+                            right: 10%;
+                        }
+                        .bathroom{
+                            position: absolute;
+                            top: 85%;
+                            right: -55%;
                         }
                     }
-                    .deck{
-                        position: absolute;
-                        bottom: -10%;
-                        right: -45%;
-                    }
-                    .serve{
-                        position: absolute;
-                        bottom: -110%;
-                        right: 10%;
-                    }
-                    .bathroom{
-                        position: absolute;
-                        top: 85%;
-                        right: -55%;
-                    }
                 }
+                
                
             }
            
