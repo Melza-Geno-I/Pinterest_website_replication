@@ -335,7 +335,7 @@
 
         <!--section-1 button (navigation to next section) start-->
         <div class="nav">
-            <a href="#section2" class="downNavBtn" id="btn1" style="z-index: 1;"><i class="fa-solid fa-angle-down"></i></a>
+            <a href="#section2" class="downNavBtn" id="btn1" style="position:relative; z-index:1;"><i class="fa-solid fa-angle-down"></i></a>
         </div>
         <!--section-1 button (navigation to next section) end-->
 
@@ -512,33 +512,42 @@
                 <div class="grid">
                     <a href="#section1" class="upNavBtn"><i class="fa-solid fa-angle-up"></i></a>
                     <div class="block1">
-                        <h1 style="font-weight: 500;">Sign up to get your ideas</h1>
+                        <div class="block-1-container">
+                            <h1 style="font-weight: 500;">Sign up to get your ideas</h1>
+                        </div>
                     </div>
                 
                     <div class="block2">
-                        <div class="formContainer">
-                        <img class="imgForm" src="https://s.pinimg.com/webapp/logo_trans_144x144-a77ee814.png" width="50px" height="50px" alt="logo">
-                        <h1 style="font-weight: 500; ">Welcome to Pinterest</h1>
-                        <h5 style="margin-bottom: 1rem; font-weight: 400;">Find new ideas to try</h5>
-                        <form action="" class="form">
-                            
-                            <div class="formInput">
-                                <label for="">Email</label><br>
-                                <input type="email" placeholder="Email"><br>
-                                <label for="">Password</label><br>
-                                <input type="password" placeholder="Create a password"><br>
-                                <label for="">Birthdate</label><br>
-                                <input type="text" placeholder="dd-mm-yy"><br>
-                            </div> 
-                            <button style="background-color: rgb(204, 41, 41);">Continue</button><br>
-                            <p>OR</p>
-                            <button style="background-color: rgb(45, 111, 233); "><i class="fa-brands fa-facebook" style="color: #ffffff;"></i> &nbsp;Continue with Facebook</button><br>
-                
-                            <button style="color: black; background-color: white; border: .5px solid gainsboro;"><i class="fa-brands fa-google" style="color: #db483d;"></i> &nbsp;Continue with Google</button>
-                            <p>By continuing, you are agree to Pinterest's <b>Terms of Service</b> and acknowledge you've read our <b>Privacy policy</b>. <b>Notice at collection</b>.</p><br>
-                            <p>Already a member? <b>Log in</b></p>
-                        </form>
-                    </div>
+                        <div class="block-2-form-container">
+                            <div class="formContainer">
+                            <img class="imgForm" src="https://s.pinimg.com/webapp/logo_trans_144x144-a77ee814.png" width="50px" height="50px" alt="logo" style="margin-top:6rem ;" >
+                            <h1 style="font-weight: 500; font-size: 30px; ">Welcome to Pinterest</h1>
+                            <h5 style="margin-bottom: 1rem; font-weight: 400; font-size: 15px;">Find new ideas to try</h5>
+                            <form action="" class="form">
+                                
+                                <div class="formInput">
+                                    <label for="">Email</label><br>
+                                    <input type="email" placeholder="Email"><br>
+                                    <label for="">Password</label><br>
+                                    <input type="password" placeholder="Create a password"><br>
+                                    <label for="">Birthdate &nbsp;&nbsp;<i class="fa-solid fa-circle-info" style="color: #727477;"></i></label><br>
+                                    <input type="text" placeholder="dd-mm-yy"><br>
+                                </div> 
+                                <button style="background-color: rgb(230, 49, 49); font-weight:bold ;
+                                font-size: 15px;">Continue</button><br>
+                                <p style="font-size: 15px; font-weight: bold; color: #3b3b3b;">OR</p>
+                                <button style="background-color: rgb(45, 111, 233); font-weight:bold ;
+                                font-size: 15px; "><i class="fa-brands fa-facebook" style="color: #ffffff;"></i> &nbsp;Continue with Facebook</button><br>
+                    
+                                <button style="color: black; background-color: white; border: .5px solid gainsboro; font-size: 14px;"><i class="fa-brands fa-google" style="color: #db483d;"></i> &nbsp;Continue with Google</button>
+                                <p>By continuing, you are agree to Pinterest's <b>Terms of Service</b> and acknowledge you've read our <b>Privacy policy</b>. <b>Notice at collection</b>.</p><br>
+                                <p>Already a member? <b>Log in</b></p>
+
+                            </form>
+                            <p style="margin-top:2rem; background-color: rgb(240, 240, 240); color: black; width: 100%; cursor: pointer; padding: 1rem;  border-radius: 30px;border-bottom: 1px solid transparent ;">Create a free business account</p>
+
+                            </div>
+                        </div>
                     </div>
                 
                 <footer class="footer">
