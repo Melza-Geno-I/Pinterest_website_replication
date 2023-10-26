@@ -9,11 +9,14 @@
 }
 body{
     overflow-x: hidden;
+    overflow-y: scroll;
+    
 }
 .header{
     display: flex;
-    padding: .6rem;
+    padding: .3rem;
     width: 100%;
+    height: 70px;
     position: fixed;
     z-index: 1;
     background-color: white;
@@ -94,7 +97,7 @@ body{
     display: flex;
     width: 100vw;
     place-content: center;
-    height: 90vh;
+    height: 100vh;
     background-color: rgb(255, 255, 255);
     color: black;
     text-align: center;
@@ -107,7 +110,7 @@ body{
     }
    .nav{
     position: absolute;
-        bottom: 6%;
+    bottom: 14%;
     .downNavBtn{
         background-color: rgb(199, 150, 27);
         width:45px;
@@ -126,14 +129,36 @@ body{
         justify-content: center;
         text-decoration: none;
         
+    }}
+    .section1-footer{
+        position: absolute;
+        width: 100vw;
+        height: 10vh;
+        background-color:rgb(255,253,146);
+        bottom: 0%;
+        z-index: 1;
+        display: flex;
+        align-items: center; 
+        justify-content: center;
+        color: black;
+        font-weight: 500;
     }
-   } 
+    .section1-footer::before{
+        /* box-shadow: 0 -70px 50px -20px rgba(255, 255, 255, 0.767); */
+        background: linear-gradient( to top, white,rgba(255, 255, 255, 0)) ;
+        position: absolute;
+        top:-80px;
+        left:0;
+        height: 80px;
+        width: 100%;
+        content:''
+    }
     
     .slide{
         display: flex;
         flex-direction: row;
         position: relative;
-        top: 37%;
+        top: 32%;
         .title{
             position: absolute;
             display: flex;
@@ -152,23 +177,27 @@ body{
                 animation-iteration-count: infinite ;
             }
              .column.col-2{
-                top: 25%;
+                margin-top: 160px;
                 animation-delay:.2s ;
                  } 
              .column.col-3{
-                top: 45%;
+                margin-top:240px ;
+                /* top: 45%; */
                 animation-delay: .4s;
              }
              .column.col-4{
-                top: 67%;
+                /* top: 67%; */
+                margin-top: 350px;
                 animation-delay:.6s;
              }
              .column.col-5{
-                top: 45%;
+                /* top: 45%; */
+                margin-top:240px ;
                 animation-delay: .8s;
              }
              .column.col-6{
-                top: 25%;
+                margin-top: 160px;
+                /* top: 25%; */
                 animation-delay: 1s;
              }
              .column.col-7{
@@ -205,23 +234,21 @@ body{
     .section1 .dots .carousal-pointers #radio3.selected{
         background-color:  rgb(12, 77, 17);
     }
-/* end
 
-/* Define button color classes */
 .section1 .nav .downNavBtn.button-color-1 {
-    background-color:  rgb(199, 150, 27); /* Red color for button 1 */
+    background-color:  rgb(199, 150, 27); 
 }
 
 .section1 .nav .downNavBtn.button-color-2 {
-    background-color:rgb(33, 144, 218); /* Green color for button 2 */
+    background-color:rgb(33, 144, 218); 
 }
 
 .section1 .nav .downNavBtn.button-color-3 {
-    background-color:rgb(79, 118, 121); /* Blue color for button 3 */
+    background-color:rgb(79, 118, 121); 
 }
 
 .section1 .nav .downNavBtn.button-color-4 {
-    background-color:rgb(12, 77, 17); /* Yellow color for button 4 */
+    background-color:rgb(12, 77, 17); 
 }
 
     
@@ -234,21 +261,22 @@ body{
     }    
     @keyframes btn {
         0%{
-        transform: translateY(0px) ;
+        transform: translateY(-10px) ;
         }
-        50%{ transform: translateY(10px) ;}
+        50%{ transform: translateY(0px) ;}
         100%{
             transform: translateY(-10px) ;
         }
     }
+    
+    /* section-2 styles start*/
     .section2{
-        box-shadow: 0px -50px 50px -50px rgb(255, 255, 255);
-        background-color: rgb(255, 249, 134); 
+        background-color: rgb(255,253,146); 
         font-family: 'Roboto',sans-serif;
         font-size: 15px;
         font-weight: 500;
         width: 100vw;
-        height: 110vh;
+        height: 100vh;
         text-align: center;
         padding: 1rem;
         .grid{
@@ -257,49 +285,55 @@ body{
             padding: 1rem;
             .block1{
                 position: relative;
-                height: 102vh;
+                height: 100vh;
                 cursor: pointer;
+                display: flex;
+                align-items: center;
+                    justify-content: center;    
+                .block-1-img-container{
+                    margin-top: -300px;
                 .img1{
-                    position: absolute;
-                    right: 3%;
-                    top:0%;
+                    margin-top: -30px;
+                    margin-left: 340px;
                     border: 1px solid transparent;
-                    border-radius: 50px;
+                    border-radius: 40px;
+                    object-fit: cover;
+                    display: flex;
                 }
                 .img2{
-                    position: absolute;
-                    top:30%;
-                    left:0%;
+                    margin-top: -80px;
+                    margin-left: 0px;
                     border: 1px solid transparent;
                     border-radius: 50px;
+                    display: flex;
                 }
                 .img3{
-                    position: absolute;
-                    bottom: 0%;
-                    right: 0%;
+                    margin-top: -80px;
+                    margin-left: 370px;
                     border: 1px solid transparent;
                     border-radius: 50px;
+                    display: flex;
                 }
                 .img4{
-                    position: absolute;
-                    top:17%;
-                    left:30%;
+                    margin-top: -530px;
+                    margin-left:150px;
                     border: 1px solid transparent;
                     border-radius: 50px;
+                    display: flex;
                 }
                 .searchBar{
+                    position: relative;
                     display: flex;
                     align-items: center;
-                    position: absolute;
-                    top:40%;
-                    left: 20%;
+                    margin-top:-300px;
+                    margin-left:100px ;
                     background-color: white;
                     z-index: 1;
                     padding: 2rem;
                     border: 1px solid transparent;
                     border-radius: 50px;
-                    font-size: 17px;
-                    font-weight: 900;
+                    font-size: 15px;
+                    font-weight: 700;
                     .fa-magnifying-glass{
                         margin-right: .5rem;
                     }
@@ -307,6 +341,7 @@ body{
                 .searchBar h2{
                     color: rgb(90, 15, 65);
                 }
+            }
             }
             .block1 img{
                 border: none;
@@ -362,78 +397,87 @@ body{
                 height: 100vh;
                 cursor: pointer;
                 color: white;
-                .image{
-                    width: 400px;
-                    height: 400px;
-                    position: relative;
-                    .image1{
-                        border-radius: 70px;
-                    }
-                    .image1Heading{
-                        position: absolute;
-                        text-align: center;
-                        top:18%;
-                        font-size:50px ;
-                        padding: 2rem;
-                        text-align: left;
-                        font-weight: 500;
-                    }
-                    .section3Grid{
-                        position: absolute;
-                        display: grid;
-                        width: 100%;
-                        gap: 1rem;
-                        top: 58%;
-                        padding: 1.5rem;
-                        grid-template-areas: 'one two three';
-                        align-items: center;
-                        justify-content: center;
-                    }
-                    .image2{
-                        grid-area: 'one';
-                        border-radius: 20px;
-                    }
-                    .image3{
-                        grid-area: 'two';
-                        border-radius: 20px;
-                    }
-                    .image4{
-                        grid-area: 'three';
-                        border-radius: 20px;
-                    }
-                    .scandinavian{
-                        position: absolute;
-                        width:200 ;
-                        height:200 ;
-                        right: -60%;
-                        top: 0%;
-                        display: flex;
-                        justify-content: end;
-                        align-items: end;
-                        .scandinavianHeading{
-                            position: inherit;
-                            top:  20%;
-                            bottom: 0%;
+                .section3-img-container{
+                    display: flex;
+                    align-items: center;
+                    justify-content: left;
+                    width: 100%;
+                    height: 100%;
+                    .image{
+                        width: 400px;
+                        height: 400px;
+                        position: relative;
+                       
+                        .image1{
+                            border-radius: 70px;
+                        }
+                        .image1Heading{
+                            position: absolute;
+                            text-align: center;
+                            top:18%;
+                            font-size:50px ;
+                            padding: 2rem;
                             text-align: left;
-                            font-weight: bold;
+                            font-weight: 500;
+                        }
+                        .section3Grid{
+                            position: absolute;
+                            display: grid;
+                            width: 100%;
+                            gap: 1rem;
+                            top: 58%;
+                            padding: 1.5rem;
+                            grid-template-areas: 'one two three';
+                            align-items: center;
+                            justify-content: center;
+                        }
+                        .image2{
+                            grid-area: 'one';
+                            border-radius: 20px;
+                        }
+                        .image3{
+                            grid-area: 'two';
+                            border-radius: 20px;
+                        }
+                        .image4{
+                            grid-area: 'three';
+                            border-radius: 20px;
+                        }
+                        .scandinavian{
+                            position: absolute;
+                            width:200 ;
+                            height:200 ;
+                            right: -60%;
+                            top: 0%;
+                            display: flex;
+                            justify-content: end;
+                            align-items: end;
+                            .scandinavianHeading{
+                                position: inherit;
+                                top:  20%;
+                                bottom: 0%;
+                                text-align: left;
+                                font-weight: bold;
+                            }
+                        }
+                        .deck{
+                            position: absolute;
+                            bottom: -10%;
+                            right: -45%;
+                        }
+                        .serve{
+                            position: absolute;
+                            bottom: -110%;
+                            right: 10%;
+                        }
+                        .bathroom{
+                            position: absolute;
+                            top: 85%;
+                            right: -55%;
                         }
                     }
-                    .deck{
-                        position: absolute;
-                        bottom: -10%;
-                        right: -45%;
-                    }
-                    .serve{
-                        position: absolute;
-                        bottom: -110%;
-                        right: 10%;
-                    }
-                    .bathroom{
-                        position: absolute;
-                        top: 85%;
-                        right: -55%;
-                    }
                 }
+                
                
             }
            
@@ -469,6 +513,9 @@ body{
             margin-bottom: 1rem;
         }
     }
+/* section-3 styles end */
+
+/* section-4 styles start */
     .section4{
         background-color: rgb(250, 228, 222); 
         width: 100vw;
@@ -481,7 +528,11 @@ body{
         .block1{
             cursor: pointer;
             position: relative;
-            overflow: hidden;
+            .section4Image1{
+                height: 100vh;
+                width: 50vw;
+                object-fit: cover;
+            }
             .section4Image2{
                 position: absolute;
                 top:10%;
@@ -567,13 +618,44 @@ body{
             height: 95vh;
            position: relative;
             .section5BG{
+                display: flex;
+                align-items: center;
+                justify-content: center;
                position: absolute;
-               display: flex;
                flex-direction: row;
+               width: 100%;
                 z-index: -1;
                 .column{
                     display: flex;
                     flex-direction: column;
+                }
+                .column.col-1{
+                    margin-top:0;
+                    gap:5px;
+                }
+                .column.col-2{
+                    gap:5px;
+                    margin-top:-350px;
+                }
+                .column.col-3{
+                    gap:5px;
+                    margin-top:-550px;
+                }
+                .column.col-4{
+                    gap:5px;
+                    margin-top:-800px;
+                }
+                .column.col-5{
+                    gap:5px;
+                    margin-top:-550px;
+                }
+                .column.col-6{
+                    gap:5px;
+                    margin-top:-350px;
+                }
+                .column.col-7{
+                    gap:5px;
+                    margin-top:0;
                 }
             }
             .grid{
@@ -587,54 +669,75 @@ body{
                     display: flex;
                     align-items: center;
                     padding: 0 9rem;
+                    .block-1-container{
+                        width: 426px;
+                        height: 282px;
+                        font-weight: bold;
+                    }
                 }
                 .block2{
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    .formContainer{
-                        background-color: white;
-                        width: 30vw;
-                        height: 100vh;
-                        text-align: center;
-                    .imgForm{
-                        margin: 1rem;
-                    }
-                        .form{
-                            .formInput{
-                                text-align: left; 
+                    .block-2-form-container{
+                       width: 100%;
+                       height: 100vh;
+                       margin: 0 auto;
+                       display: flex;
+                       align-items: center;
+                       justify-content: center;
+                        .formContainer{
+                            background-color: white;
+                            width: 475px;
+                            height: 694px;
+                            border: 1px solid transparent;
+                            border-radius: 30px;
+                            align-items: center;
+                            justify-content: center;
+                            text-align: center;
+                            min-height: 400px;
+                        height: fit-content;
+                            .imgForm{
+                                margin: 1rem;
                             }
-                            padding:0 5rem;
-                            font-size: 12px;
-                        }
-                        .formInput label{
-                            margin-top: 2rem;
-                        }
-                        .form input{
-                            width: 17vw;
-                            border-radius: 10px; 
-                            padding: .5rem;
-                            outline: none;
-                            border:.5px solid gainsboro;
-                            font-size: 11px;
-                        }
-                        .form input:focus{
-                            border: 3.5px solid rgb(56, 149, 172);
-                        }
-                        .form button{
-                            width: 17vw;
-                            color: white; 
-                            padding: .4rem; 
-                            border-radius: 30px; 
-                            border: none;
-                            font-size: 12px;
-                            cursor: pointer;
-                            margin: .3rem;
-                        }
-                        .form p{
-                            font-size: 9px;
+                            .form{
+                                .formInput{
+                                    text-align: left; 
+                                }
+                                padding:0 5rem;
+                                font-size: 12px;
+                            }
+                            .formInput label{
+                                font-size: 13px;
+                            }
+                            .form input{
+                                width: 100%;
+                                border-radius: 15px; 
+                                padding:.3rem 1rem;
+                                outline: none;
+                                border:.5px solid gainsboro;
+                                min-height: 48px;
+                                font-size: 13px;
+                                max-width: 100%;
+                                margin-bottom: .5rem;
+                            }
+                            .form input:focus{
+                                border: 5px solid rgb(123, 208, 230);
+                            }
+                            .form button{
+                                width: 100%;
+                                color: white; 
+                                padding: .5rem; 
+                                border-radius: 30px; 
+                                border: none;
+                                font-size: 12px;
+                                cursor: pointer;
+                                margin: .3rem;
+                                
+                            }
+                            .form p{
+                                font-size: 9px;
+                            }
                         }
                     }
+                    
                 }
             
                 .footer{
